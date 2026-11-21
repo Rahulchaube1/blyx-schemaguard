@@ -1,0 +1,13 @@
+use schemaguard;
+
+fn main() {
+    let expected = [11, 22, 33];
+    let actual = [11, 20, 30];
+    let result = schemaguard_drift(expected, actual);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
